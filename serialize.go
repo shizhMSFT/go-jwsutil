@@ -8,7 +8,7 @@ import (
 // SerializeCompact serialize the signature in JWS Compact Serialization
 // See https://www.rfc-editor.org/rfc/rfc7515#section-7.1
 func (s CompleteSignature) SerializeCompact() string {
-	return fmt.Sprintf("%s.%s.%s", s.Protected, s.Payload, s.Signature)
+	return fmt.Sprintf("%s.%s.%s", s.Protected, s.Payload, s.Signature.Signature)
 }
 
 // SerializeJSON serialize the signature in JWS JSON Serialization
